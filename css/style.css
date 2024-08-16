@@ -41,10 +41,10 @@ canvas {
 .counter {
   font-family: 'superscript', Arial, sans-serif;
   font-size: 22px;
-  color: black;
+  color: white;
   position: absolute;
-  bottom: 0;
-  right: 20px;
+  top: 10px;
+  left: 30px;
   text-align: center;
   z-index: 2;
 }
@@ -83,3 +83,24 @@ canvas {
     display: none;
   }
 }
+.music-Control{
+  position: absolute;
+  top: 10px;
+  right: 20px;
+}
+.musicIcon{
+  width: 40px;
+  height: auto;
+}
+#musicToggle{
+  border: none;
+  background: none;
+  color: #fff;
+  font-size: 24px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+.musicToggle:hover{
+  color: #ddd;
+}
+

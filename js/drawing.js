@@ -1,5 +1,8 @@
 // Functions responsible for drawing on canvas
 
+const gameOverSound = new Audio("../sounds/gameover.mp3");
+const gameMusicSound = new Audio("../sounds/music.mp3");
+
 game.drawTile = function (tileColumn, tileRow, x, y) {
   game.context.drawImage(
     game.textures,
@@ -111,8 +114,9 @@ game.redraw = function () {
   // Draw the player
   game.drawPlayer();
 
+  //points
   (game.counter.innerHTML =
-    "A game by Karol Swierczek | Controls: A, D / arrows and SPACE | Points: " +
+    "Points: " +
     Math.round(-game.player.highestY / (3 * game.options.tileHeight))),
     game.canvas.width - 50,
     game.canvas.height - 12;
@@ -140,7 +144,8 @@ game.requestRedraw = function () {
       game.canvas.width / 2,
       game.canvas.height / 2 + 50
     );
-
+    //gameOver sound
+    gameOverSound.play();
     //space to reload page
     document.addEventListener(
       "keydown",
