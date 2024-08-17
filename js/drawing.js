@@ -1,7 +1,6 @@
 // Functions responsible for drawing on canvas
 
-const gameOverSound = new Audio("../sounds/gameover.mp3");
-const gameMusicSound = new Audio("../sounds/music.mp3");
+const gameOverSound = new Audio("../sounds/gameover.wav");
 
 game.drawTile = function (tileColumn, tileRow, x, y) {
   game.context.drawImage(
